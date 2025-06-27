@@ -45,7 +45,7 @@ export default function Component() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-white ">
+    <div className="min-h-screen bg-white my-32 ">
       <div className="grid lg:grid-cols-[40%_60%]  gap-16 ">
         {/* Left Content */}
         <div className="space-y-8 ">

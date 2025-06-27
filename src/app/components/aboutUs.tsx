@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutUs = () => {
   return (
-    <section className="py-16 lg:py-24 ">
+    <section className="py-16 lg:py-28 ">
       <div className="container mx-auto  flex  gap-12 lg:gap-16 ">
         <div className="">
           {/* Left Content - Image with Overlay */}

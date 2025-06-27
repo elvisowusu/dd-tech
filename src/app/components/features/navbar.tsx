@@ -60,36 +60,7 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
-                    // <div
-                    //   className="relative"
-                    //   onMouseEnter={() => setIsServicesOpen(true)}
-                    //   onMouseLeave={() => setIsServicesOpen(false)}
-                    // >
-                    //   <button className="text-gray-700 relative group hover:text-gray-900 px-3 py-2 text-sm sm:text-base font-normal flex items-center transition-colors duration-200">
-                    //     {item.name}
-                    //     <ChevronDown
-                    //       className={`ml-1 h-5 w-5 transition-transform relative top-1 duration-200 ${
-                    //         isServicesOpen ? "rotate-180" : ""
-                    //       }`}
-                    //     />
-                    //     <span className="absolute left-0 bottom-0 h-[1px] w-full scale-x-0 bg-black origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    //   </button>
-
-                    //   {/* Dropdown Menu */}
-                    //   {isServicesOpen && (
-                    //     <div className="absolute top-full left-0 mt-1 w-44 bg-white rounded-3xl shadow-lg border border-gray-100 py-1">
-                    //       {item.dropdownItems?.map((dropdownItem) => (
-                    //         <a
-                    //           key={dropdownItem.name}
-                    //           href={dropdownItem.href}
-                    //           className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
-                    //         >
-                    //           {dropdownItem.name}
-                    //         </a>
-                    //       ))}
-                    //     </div>
-                    //   )}
-                    // </div>
+                    
                     <div
                       className="relative group"
                       onMouseEnter={() => setIsServicesOpen(true)}
@@ -139,13 +110,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Contact Button */}
+          {/* Partner with UsButton */}
           <div className="hidden lg:block">
             <Button
               variant="outline"
               className="border-black border-[1px] text-gray-700 text-base font-normal hover:bg-gray-50 hover:text-gray-900 rounded-full px-12 py-6 transition-all duration-200"
             >
-              Contact Us
+              Partner with Us
             </Button>
           </div>
 
@@ -212,7 +183,7 @@ export default function Navbar() {
                   variant="outline"
                   className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-full px-6 py-2 w-full"
                 >
-                  Contact Us
+                  Partner with Us
                 </Button>
               </div>
             </div>
