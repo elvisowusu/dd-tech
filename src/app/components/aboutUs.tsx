@@ -6,13 +6,13 @@ import { ArrowRight } from "lucide-react";
 export const AboutUs = () => {
   return (
     <section className="py-16 lg:py-24 ">
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-16 ">
+      <div className="container mx-auto  flex  gap-12 lg:gap-16 ">
         <div className="">
           {/* Left Content - Image with Overlay */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative w-[800px] h-[550px] rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src={"/images/landing-hero-image.jpg"}
+                src={"/images/man-in-wheel.avif"}
                 alt="Digital accessibility and inclusion workspace"
                 fill
                 className="object-cover"
@@ -27,9 +27,9 @@ export const AboutUs = () => {
             <p className="text-2xl font-semibold text-gray-600 uppercase tracking-wider">
               About Us
             </p>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl mt-12 font-bold text-gray-900 leading-tight"></h2>
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl mt-12 font-bold text-gray-900 leading-tight"> At Digital Drivers Technology (DDTech),</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              At Digital Drivers Technology (DDTech), we believe that technology
+              we believe that technology
               is the key to breaking barriers and creating an inclusive world.
               Based in Ghana, we are committed to promoting disability
               inclusion, accessibility, and digital empowerment in the tech

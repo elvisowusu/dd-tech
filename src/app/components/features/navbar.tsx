@@ -1,6 +1,6 @@
 "use client";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [onScroll, setOnScroll] = useState(false);
-  const [hideNav,setHideNav] = useState(false)
+  const [hideNav, setHideNav] = useState(false);
   const navItems = [
     { name: "Home", href: "#" },
     {
@@ -29,7 +29,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setOnScroll(window.scrollY > 50);
-      setHideNav(window.scrollY > 350)
+      setHideNav(window.scrollY > 750);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,12 +38,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <nav
-       className={` ${hideNav? "hidden" :""} sticky top-0 z-50 transition-all duration-500 ease-in-out ${
-    onScroll ? "rounded-xl bg-white py-2 top-10 opacity-40" : ""
-  } `}
+      className={` ${
+        hideNav ? "hidden" : ""
+      } sticky top-0 z-50 transition-all duration-500 ease-in-out ${
+        onScroll ? "rounded-xl bg-white py-2 top-10 opacity-85" : ""
+      } `}
     >
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -55,39 +56,74 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <div className= "ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
+                    // <div
+                    //   className="relative"
+                    //   onMouseEnter={() => setIsServicesOpen(true)}
+                    //   onMouseLeave={() => setIsServicesOpen(false)}
+                    // >
+                    //   <button className="text-gray-700 relative group hover:text-gray-900 px-3 py-2 text-sm sm:text-base font-normal flex items-center transition-colors duration-200">
+                    //     {item.name}
+                    //     <ChevronDown
+                    //       className={`ml-1 h-5 w-5 transition-transform relative top-1 duration-200 ${
+                    //         isServicesOpen ? "rotate-180" : ""
+                    //       }`}
+                    //     />
+                    //     <span className="absolute left-0 bottom-0 h-[1px] w-full scale-x-0 bg-black origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                    //   </button>
+
+                    //   {/* Dropdown Menu */}
+                    //   {isServicesOpen && (
+                    //     <div className="absolute top-full left-0 mt-1 w-44 bg-white rounded-3xl shadow-lg border border-gray-100 py-1">
+                    //       {item.dropdownItems?.map((dropdownItem) => (
+                    //         <a
+                    //           key={dropdownItem.name}
+                    //           href={dropdownItem.href}
+                    //           className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+                    //         >
+                    //           {dropdownItem.name}
+                    //         </a>
+                    //       ))}
+                    //     </div>
+                    //   )}
+                    // </div>
                     <div
-                      className="relative"
+                      className="relative group"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button className="text-gray-700 relative group hover:text-gray-900 px-3 py-2 text-sm sm:text-base font-normal flex items-center transition-colors duration-200">
+                      <button className="text-gray-700 relative hover:text-black px-3 py-2 text-sm sm:text-base font-medium flex items-center transition-colors duration-300">
                         {item.name}
                         <ChevronDown
-                          className={`ml-1 h-5 w-5 transition-transform relative top-1 duration-200 ${
+                          className={`ml-1 h-5 w-5 transition-transform duration-300 ${
                             isServicesOpen ? "rotate-180" : ""
                           }`}
                         />
-                        <span className="absolute left-0 bottom-0 h-[1px] w-full scale-x-0 bg-black origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-black origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                       </button>
 
                       {/* Dropdown Menu */}
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-1 w-44 bg-white rounded-3xl shadow-lg border border-gray-100 py-1">
-                          {item.dropdownItems?.map((dropdownItem) => (
-                            <a
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
-                            >
-                              {dropdownItem.name}
-                            </a>
-                          ))}
-                        </div>
-                      )}
+                      <div
+                        className={`absolute left-0 top-full z-20 mt-2 w-48 rounded-xl bg-white shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 ease-out
+                      ${
+                        isServicesOpen
+                          ? "opacity-100 translate-y-0 pointer-events-auto"
+                          : "opacity-0 -translate-y-2 pointer-events-none"
+                      }`}
+                         >
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <a
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-5 py-3 text-sm text-gray-700 hover:bg-[#f0f4f8] hover:text-black transition-all duration-200"
+                          >
+                            {dropdownItem.name}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   ) : (
                     <a
