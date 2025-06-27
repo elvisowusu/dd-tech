@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [onScroll, setOnScroll] = useState(false);
+  const [hideNav,setHideNav] = useState(false)
   const navItems = [
     { name: "Home", href: "#" },
     {
@@ -28,6 +29,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setOnScroll(window.scrollY > 50);
+      setHideNav(window.scrollY > 350)
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,9 +41,9 @@ export default function Navbar() {
 
   return (
     <nav
-       className={`sticky top-0 z-50 transition-all duration-500 ease-in-out ${
-    onScroll ? "rounded-xl bg-white py-2 top-10" : ""
-  }`}
+       className={` ${hideNav? "hidden" :""} sticky top-0 z-50 transition-all duration-500 ease-in-out ${
+    onScroll ? "rounded-xl bg-white py-2 top-10 opacity-40" : ""
+  } `}
     >
       <div className=" px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">

@@ -10,7 +10,7 @@ export const AboutUs = () => {
         <div className="">
           {/* Left Content - Image with Overlay */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
               <Image
                 src={"/images/landing-hero-image.jpg"}
                 alt="Digital accessibility and inclusion workspace"
@@ -45,7 +45,7 @@ export const AboutUs = () => {
               className="group px-9 py-4 text-base font-semibold rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
             >
               learn more
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform rotate-330 group-hover:translate-x-1" />
             </Button>
           </div>
         </div>

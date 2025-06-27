@@ -10,6 +10,9 @@ export default function HeroSection() {
         secondaryButtonText="Learn More"
         backgroundImage="/images/landing-hero-image.jpg"
       />
+      <div className="w-3xl bg-white">
+
+      </div>
     </div>
   );
 }
