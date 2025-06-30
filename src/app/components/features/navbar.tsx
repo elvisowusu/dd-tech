@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-50 max-w-5xl pr-12 lg:pr-4 lg:max-w-[97rem] mx-auto  top-0 transition-all duration-500 ${
+      className={`fixed w-full z-50 pr-4 md:max-w-[97rem] mx-auto  top-0 transition-all duration-500 ${
         hideNav ? "-translate-y-full" : "translate-y-0"
       } ${onScroll ? "bg-white  py-2" : "py-4"}`}
     >
@@ -48,7 +49,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold text-black">
-            DD <span className="text-[#34c85a]">Technology</span>
+           <Image src="/images/DD-logo.jpg" alt="DD tech logo" width={80} height={80}/>
           </a>
 
           {/* Desktop Nav */}
@@ -114,7 +115,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-black focus:outline-none"
+              className="text-black text-2xl focus:outline-none"
             >
               {isMobileMenuOpen ? <>&#10005;</> : <>&#9776;</>}
             </button>

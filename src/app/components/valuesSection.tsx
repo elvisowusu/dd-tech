@@ -63,7 +63,7 @@ export default function ValuesSection() {
               const IconComponent = value.icon;
               return (
                 <div key={value.id} className=" gap-8 group">
-                  <div className="flex items-start space-x-8">
+                  <div className="flex flex-col md:flex-row items-start space-x-8">
                     {/* Large Number */}
                     <div className="text-6xl lg:text-7xl font-bold text-gray-200 group-hover:text-gray-300 transition-colors min-w-fit">
                       {String(index + 1).padStart(2, "0")}
@@ -96,12 +96,12 @@ export default function ValuesSection() {
       {/* Vision and Mission Section */}
       <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen my-12 lg:my-24 flex items-center justify-end w-full overflow-hidden">
         {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-3xl p-12 max-w-2xl mx-8 shadow-2xl">
+        <div className="relative z-10 bg-white rounded-3xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
           {/* Toggle Buttons */}
           <div className="flex mb-8">
             <button
               onClick={() => setActiveTab("vision")}
-              className={`px-6  py-1 rounded-full text-lg font-semibold transition-all duration-300 ${
+              className={`px-2  py-1 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 ${
                 activeTab === "vision"
                   ? "bg-black text-white"
                   : "bg-transparent text-gray-600 border border-gray-300 hover:border-gray-400"
@@ -111,7 +111,7 @@ export default function ValuesSection() {
             </button>
             <button
               onClick={() => setActiveTab("mission")}
-              className={`px-6 py-1  rounded-full text-lg font-semibold ml-4 transition-all duration-300 ${
+              className={`px-6 py-1  rounded-full text-sm md:text-lg font-semibold ml-4 transition-all duration-300 ${
                 activeTab === "mission"
                   ? "bg-black text-white"
                   : "bg-transparent text-gray-600 border border-gray-300 hover:border-gray-400"

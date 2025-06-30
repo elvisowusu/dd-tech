@@ -45,8 +45,8 @@ export default function Component() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-white my-32 ">
-      <div className="grid lg:grid-cols-[40%_60%]  gap-16 ">
+    <div className="md:min-h-screen my-2 bg-white md:my-32 ">
+      <div className="grid px-2 md:px-0 md:grid-cols-[40%_60%]  md:gap-16 ">
         {/* Left Content */}
         <div className="space-y-8 ">
           <div className="space-y-2">
@@ -72,7 +72,7 @@ export default function Component() {
 
         {/* Right Content - Services Row */}
         <div className="overflow-hidden">
-          <div className="flex gap-4 h-[600px] overflow-hidden">
+          <div className="flex flex-col mt-4 md:mt-0 md:flex-row gap-4 h-[600px] overflow-hidden">
             {services.map((service) => (
               <div
                 key={service.id}

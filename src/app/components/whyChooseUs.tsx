@@ -31,7 +31,7 @@ export default function WhyChooseSection() {
   return (
     <div className=" px-8 lg:px-16">
       {/* Header */}
-      <div className="text-center mb-16">
+      <div className="text-center my-16 md:mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           Why Choose DDTech?
         </h2>
@@ -42,7 +42,7 @@ export default function WhyChooseSection() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid items-center justify-center md:grid-cols-2 lg:grid-cols-4 gap-8">
         {reasons.map((reason) => {
           return (
             <div

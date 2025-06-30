@@ -6,11 +6,11 @@ import { ArrowRight } from "lucide-react";
 export const AboutUs = () => {
   return (
     <section className="py-16 lg:py-28 ">
-      <div className="container mx-auto  flex  gap-12 lg:gap-16 ">
+      <div className="container mx-auto  flex flex-col md:flex-row  justify-center items-center gap-12 lg:gap-16 ">
         <div className="">
           {/* Left Content - Image with Overlay */}
           <div className="relative">
-            <div className="relative w-[800px] h-[550px] rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative w-[380px] h-[300px] md:w-[800px] md:h-[550px] rounded-xl overflow-hidden shadow-2xl">
               <Image
                 src={"/images/man-in-wheel.avif"}
                 alt="Digital accessibility and inclusion workspace"

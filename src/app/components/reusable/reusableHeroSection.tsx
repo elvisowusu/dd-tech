@@ -25,7 +25,7 @@ export function ReusableHeroSection({
   className = "",
 }: ImmersiveHeroProps) {
   return (
-    <section className={`relative min-h-screen rounded-4xl bg-black text-white overflow-hidden ${className}`}>
+    <section className={`relative lg:min-h-screen p-2 mx-0 md:p-6 mt-8 md:my-1 md:rounded-4xl bg-black text-white overflow-hidden ${className}`}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -35,24 +35,12 @@ export function ReusableHeroSection({
           className="object-cover opacity-80"
           priority
         />
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto  px-4 py-20 lg:pt-54">
+      <div className="relative z-10 md:container md:mx-auto  md:px-4 py-20 lg:pt-54">
         <div className="">
-          <div className="space-y-8 px-16">
+          <div className="space-y-8 px-2 lg:px-16">
             <h1 className="text-4xl  md:text-5xl lg:text-6xl xl:text-8xl font-bold leading-tight tracking-tight">
               {title}
             </h1>
