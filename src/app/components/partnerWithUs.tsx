@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function PartnerSection() {
   return (
-    <div className="bg-gray-50 py-20 lg:py-32">
+    <div className=" py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16">

@@ -41,11 +41,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-50 pr-4 md:max-w-[97rem] mx-auto  top-0 transition-all duration-500 ${
+      className={`fixed w-full z-50 pr-4 md:max-w-[100rem] mx-auto  top-0 transition-all duration-500 ${
         hideNav ? "-translate-y-full" : "translate-y-0"
       } ${onScroll ? "bg-white  py-2" : "py-4"}`}
     >
-      <nav className=" pr-4 md:px-6 lg:px-8">
+      <nav className=" pr-4 md:pr-6 ">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold text-black">

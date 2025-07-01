@@ -192,21 +192,21 @@ export default function ValuesSection() {
   const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
 
   return (
-    <div className="bg-white py-4 lg:py-8 flex flex-col-reverse md:flex-col">
+    <div className=" py-4 lg:py-8 flex flex-col-reverse md:flex-col">
       {/* Core Values Section */}
       <div className="bg-white/95 backdrop-blur-sm px-4 sm:px-6">
         <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12">
-          <div className="mb-8 sm:mb-12 text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#89e8a1] mb-4">
+          <div className="mb-8 sm:mb-20 text-center">
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#89e8a1] mb-4">
               Our Core Values
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light ">
               These fundamental principles guide everything we do and shape our
               commitment to creating inclusive digital experiences.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24 ">
             {coreValues.map((value, index) => {
               const Icon = value.icon;
               return (

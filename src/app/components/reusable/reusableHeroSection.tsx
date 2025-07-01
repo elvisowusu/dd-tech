@@ -38,14 +38,14 @@ export function ReusableHeroSection({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 md:container md:mx-auto  md:px-4 py-20 lg:pt-44">
+      <div className="relative z-10 md:container md:mx-auto  md:px-4 py-20 lg:pt-40">
         <div className="">
           <div className="space-y-8 px-2 lg:px-16">
             <h1 className="text-4xl  md:text-5xl lg:text-6xl xl:text-8xl font-bold leading-tight tracking-tight">
               {title}
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">{subtitle}</p>
+            <p className="text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed">{subtitle}</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
