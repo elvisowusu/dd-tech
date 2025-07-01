@@ -45,7 +45,7 @@ export default function Navbar() {
         hideNav ? "-translate-y-full" : "translate-y-0"
       } ${onScroll ? "bg-white  py-2" : "py-4"}`}
     >
-      <nav className=" px-4 md:px-6 lg:px-8">
+      <nav className=" pr-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold text-black">
@@ -124,7 +124,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="mt-4 lg:hidden space-y-4 ">
+          <div className="mt-4  lg:hidden space-y-4 bg-white w-[400px] p-4">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (

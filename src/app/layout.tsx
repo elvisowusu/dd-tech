@@ -27,8 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased md:p-6 md:max-w-[100rem] md:mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased md:p-6 md:max-w-[100rem] md:mx-auto  bg-gradient-to-br from-slate-50 via-white to-green-50`}
       >
+        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full opacity-50 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-teal-100 to-green-100 rounded-full opacity-50 blur-3xl"></div>
+      </div>
         <Navbar/>
         {children}
       </body>

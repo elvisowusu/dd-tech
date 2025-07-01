@@ -46,24 +46,24 @@ export default function Component() {
 
   return (
     <div className="md:min-h-screen my-2 bg-white md:my-32 ">
-      <div className="grid px-2 md:px-0 md:grid-cols-[40%_60%]  md:gap-16 ">
+      <div className="grid grid-col-1 items-center px-2 md:px-0 md:grid-cols-[40%_60%]  md:gap-16 ">
         {/* Left Content */}
-        <div className="space-y-8 ">
+        <div className="text-center md:text-start">
           <div className="space-y-2">
-            <p className="text-gray-600 text-2xl font-medium mb-10 mt-6">What We Do</p>
+            <p className="text-[#89e8a1] text-2xl font-medium  my-6">What We Do</p>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Inclusive Technology
             </h1>
           </div>
 
-          <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+          <p className="text-gray-600 my-6 text-lg leading-relaxed max-w-md">
            We provide inclusive tech solutions—ranging from accessible development to training, consultancy, and assistive tools—that promote digital empowerment and equal opportunities for all, especially persons with disabilities.
           </p>
 
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full px-8 py-6 text-lg border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors group bg-transparent"
+            className="rounded-full px-8 py-6 text-[#34c85a] text-lg border-2 mb-4 border-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-colors group bg-transparent"
           >
             Explore Services
             <ArrowUpRight className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
