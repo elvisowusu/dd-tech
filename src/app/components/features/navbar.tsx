@@ -32,7 +32,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setOnScroll(window.scrollY > 50);
-      setHideNav(window.scrollY > 750);
+      setHideNav(window.scrollY > 950);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,11 +41,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-50 pr-4 md:max-w-[100rem] mx-auto  top-0 transition-all duration-500 ${
+      className={`sticky w-full px-4 md:px-16 z-50  mx-auto top-0 transition-all duration-500 ${
         hideNav ? "-translate-y-full" : "translate-y-0"
-      } ${onScroll ? "bg-white  py-2" : "py-4"}`}
+      } ${onScroll ? "bg-white  md:py-2" : "md:py-4"}`}
     >
-      <nav className=" pr-4 md:pr-6 ">
+      <nav className=" pr-4 md:pr-0 ">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold text-black">

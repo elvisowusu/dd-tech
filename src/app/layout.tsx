@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased md:p-6 md:max-w-[100rem] md:mx-auto  bg-gradient-to-br from-slate-50 via-white to-green-50 relative `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative `}
       >
         <div className="relative">
-          {/* Background Decorative Shapes */}
+      {/* Background Decorative Shapes */}
           <div className="absolute inset-0 -z-10">
             {/* Large Circle */}
             <div className="absolute -top-20 -left-20 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-[#89e8a1] opacity-20 rounded-full blur-3xl"></div>
@@ -62,8 +62,8 @@ export default function RootLayout({
               </svg>
             </div>
           </div>
-          <Navbar />
-          {children}
+        <Navbar />
+        {children}
         </div>
       </body>
     </html>

@@ -25,7 +25,7 @@ export function ReusableHeroSection({
   className = "",
 }: ImmersiveHeroProps) {
   return (
-    <section className={`relative lg:min-h-screen p-2 mx-0 md:p-6 mt-8 md:my-1 md:rounded-3xl bg-black text-white overflow-hidden ${className}`}>
+    <section className={`relative lg:min-h-screen p-2 mx-0 md:p-6  md:rounded-3xl bg-black text-white overflow-hidden ${className}`}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
