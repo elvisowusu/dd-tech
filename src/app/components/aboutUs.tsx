@@ -9,7 +9,7 @@ export const AboutUs = () => {
       <div className=" flex flex-col lg:flex-row gap-12 lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center">
-          <div className="relative w-full sm:w-[90%] md:w-[600px] h-[300px] sm:h-[400px] md:h-[450px] lg:w-[800px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative w-[90vw] sm:w-[90%] md:w-[600px] h-[300px] sm:h-[400px] md:h-[450px] lg:w-[800px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl">
             <Image
               src="/images/man-in-wheel.avif"
               alt="Digital accessibility and inclusion workspace"
@@ -49,5 +49,6 @@ export const AboutUs = () => {
         </div>
       </div>
     </section>
+    
   );
 };
