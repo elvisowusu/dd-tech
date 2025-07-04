@@ -5,8 +5,8 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutUs = () => {
   return (
-    <section className="py-6 sm:py-16 lg:py-28 ">
-      <div className=" flex flex-col lg:flex-row gap-12 lg:gap-20 items-start md:px-0 px-4">
+    <section className=" py-8 sm:py-16 lg:py-28 ">
+      <div className=" flex flex-col lg:flex-row lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center">
           <div className="relative w-[90vw] sm:w-[90%] md:w-[600px] h-[300px] sm:h-[400px] md:h-[450px] lg:w-[800px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl">
@@ -20,7 +20,7 @@ export const AboutUs = () => {
         </div>
 
         {/* Right Content - Text */}
-        <div className="space-y-6 mt-6 lg:mt-3 text-center lg:text-left">
+        <div className="space-y-6 mt-6 lg:mt-3 my-4 lg:my-0 text-center lg:text-left">
           <div className="space-y-4">
             <p className="text-lg sm:text-xl font-semibold text-[#89e8a1] uppercase tracking-wide">
               About Us

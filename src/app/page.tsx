@@ -8,7 +8,7 @@ import WhyChooseSection from "./components/whyChooseUs";
 export default function Home() {
   return (
     <>
-      <div className="relative overflow-hidden md:p-6 ">
+      <div className="relative overflow-hidden  ">
         <HeroSection />
         <AboutUs />
         <ValuesSection />
