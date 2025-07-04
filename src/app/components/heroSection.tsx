@@ -3,7 +3,7 @@ import { ReusableHeroSection } from "./reusable/reusableHeroSection";
 export default function HeroSection() {
   return (
     <div className="py-16
-     lg:py-20">
+     lg:py-20 mt-4 md:mt-0">
       <ReusableHeroSection
         title="Digital Drivers Technology (DDTech) "
         subtitle="Closing the Gap Through Technology,Empowering Inclusion, Transforming Lives"

@@ -24,8 +24,7 @@ export default function Navbar() {
         { name: "Spatial Analytics", href: "#" },
       ],
     },
-    { name: "Portfolio", href: "#" },
-    { name: "About", href: "#" },
+    { name: "About", href: "/about" },
     { name: "Products", href: "#" },
   ];
 
@@ -41,19 +40,24 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-50 md:px-6 pr-4 md:max-w-[110rem] mx-auto  top-0 transition-all duration-500 ${
+      className={`fixed w-full  z-50 md:px-6 pr-4 top-0 transition-all duration-500 ${
         hideNav ? "-translate-y-full" : "translate-y-0"
       } ${onScroll ? "bg-white  py-2" : "py-4"}`}
     >
-      <nav className=" px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <nav className=" px-4  md:px-6 lg:px-8">
+        <div className="flex justify-between items-center  h-16">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold text-black">
-           <Image src="/images/DD-logo.jpg" alt="DD tech logo" width={80} height={80}/>
+            <Image
+              src="/images/DD-logo.png"
+              alt="DD tech logo"
+              width={80}
+              height={80}
+            />
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-12">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
@@ -84,7 +88,7 @@ export default function Navbar() {
                         <a
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-black"
+                          className="block px-5 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-black"
                         >
                           {dropdownItem.name}
                         </a>
@@ -124,7 +128,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="mt-4 lg:hidden space-y-4 bg-white w-[400px] p-4">
+          <div className="p-4 lg:hidden space-y-4 bg-white w-[400px] ">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
