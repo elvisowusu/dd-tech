@@ -46,7 +46,7 @@ export default function Navbar() {
         hideNav ? "-translate-y-full" : "translate-y-0"
       } ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md top-0 shadow-lg border-b border-gray-200/20 py-2"
+          ? "bg-white/95 backdrop-blur-md top-0 shadow-lg   py-2"
           : "bg-transparent py-4"
       }`}
     >

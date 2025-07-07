@@ -43,7 +43,7 @@ export default function Home() {
           className=" fixed z-50 bottom-5 space-x-2 text-gray-300 right-5 hover:text-white transition-colors group"
         >
           
-          <div className="w-9 h-9 bg-[#34c85a] rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors">
+          <div className="w-9 h-9 bg-[#34c85a] rounded-full flex items-center justify-center group-hover:bg-[#9efdb6] transition-colors">
             <ArrowUp className="w-5 h-5" />
           </div>
         </button>

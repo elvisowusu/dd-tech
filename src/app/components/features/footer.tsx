@@ -90,7 +90,7 @@ export default function Footer() {
                 href="#"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
-                Portfolio
+                Blog
               </Link>
               <Link
                 href="#"
