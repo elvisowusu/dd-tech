@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutUs = () => {
   return (
-    <section className=" py-8 sm:py-16 lg:py-28 ">
+    <section className=" p-4 sm:p-10 lg:p-16 ">
       <div className=" flex flex-col lg:flex-row lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center">
