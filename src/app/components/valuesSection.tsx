@@ -48,7 +48,7 @@ export default function ValuesSection() {
   return (
     <div className=" py-4 lg:py-8 flex flex-col-reverse md:flex-col">
       {/* Core Values Section */}
-      <div className="bg-white/95 backdrop-blur-sm px-4 sm:px-6">
+      <div className="  px-4 sm:px-6">
         <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12">
           <div className="mb-8 sm:mb-20 text-center">
             <h2 className="text-5xl lg:text-6xl font-bold  mb-4">

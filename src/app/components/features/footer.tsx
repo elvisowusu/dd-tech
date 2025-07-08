@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Twitter, Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -90,7 +90,7 @@ export default function Footer() {
                 href="#"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
-                Portfolio
+                Blog
               </Link>
               <Link
                 href="#"
@@ -171,15 +171,7 @@ export default function Footer() {
         <p className="text-gray-400 text-sm mb-4 sm:mb-0">
           © 2025 Immersive360. All rights reserved
         </p>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
-        >
-          <span className="text-sm font-medium">BACK TO TOP</span>
-          <div className="w-8 h-8 bg-[#34c85a] rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors">
-            <ArrowUp className="w-4 h-4" />
-          </div>
-        </button>
+        
       </div>
     </footer>
   );
