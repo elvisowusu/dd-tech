@@ -9,8 +9,8 @@ export default function PartnerSection() {
       <div className="max-w-7xl mx-auto px-8 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Partner With Us</h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <h2 className="section-title">Partner With Us</h2>
+          <p className="section-description">
             Ready to embrace digital accessibility and create an inclusive future? Let&#39;s close the gap together—through
             technology!
           </p>

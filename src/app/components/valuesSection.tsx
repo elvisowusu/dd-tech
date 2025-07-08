@@ -1,8 +1,8 @@
-
 "use client";
 
 import { useState } from "react";
 import { Users, Lightbulb, Shield, Heart, Handshake } from "lucide-react";
+
 
 const coreValues = [
   {
@@ -49,12 +49,11 @@ export default function ValuesSection() {
     <div className=" py-4 lg:py-8 flex flex-col-reverse md:flex-col">
       {/* Core Values Section */}
       <div className="  px-4 sm:px-6">
-        <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12">
+        <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12" >
           <div className="mb-8 sm:mb-20 text-center">
-            <h2 className="text-5xl lg:text-6xl font-bold  mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light ">
+            <h2 className="section-title">Our Core Values</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
+            <p className="section-description ">
               These fundamental principles guide everything we do and shape our
               commitment to creating inclusive digital experiences.
             </p>
@@ -64,7 +63,7 @@ export default function ValuesSection() {
             {coreValues.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={value.id} className="space-y-4 group">
+                <div key={value.id} className="space-y-4 group" >
                   <div className="flex items-start gap-4">
                     <div className="text-4xl sm:text-5xl font-bold text-[#89e8a1]  group-hover:text-[#34c85a] transition-colors min-w-fit">
                       {String(index + 1).padStart(2, "0")}
@@ -110,7 +109,7 @@ export default function ValuesSection() {
               onClick={() => setActiveTab("mission")}
               className={`px-6 py-1  rounded-full text-sm md:text-lg font-semibold ml-4 transition-all duration-300 ${
                 activeTab === "mission"
-                 ? "bg-[#34c85a] text-white"
+                  ? "bg-[#34c85a] text-white"
                   : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
               }`}
             >
@@ -140,5 +139,3 @@ export default function ValuesSection() {
     </div>
   );
 }
-
-

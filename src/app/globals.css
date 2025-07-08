@@ -76,7 +76,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-manrope);
 }
+
+
+
+
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -119,4 +125,48 @@
   body {
     @apply bg-background text-foreground;
   }
+  .info-header{
+    @apply text-lg sm:text-xl font-semibold text-[#89e8a1] uppercase tracking-wide;
+  }
+  .info-title{
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-snug;
+  }
+  .info-description{
+    @apply text-base sm:text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0;
+  }
+  
+  .section-title{
+    @apply text-5xl lg:text-6xl font-bold  mb-4;
+  }
+  .section-description{
+    @apply text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope);
+}
+
+p, span {
+  font-family: var(--font-inter);
+}
+
+/* Optional: You can also add other elements */
+body {
+  font-family: var(--font-inter); /* Default body font */
+}
+
+/* Optional: Style specific elements differently */
+button {
+  font-family: var(--font-manrope);
+}
+
+/* Optional: Individual font classes for manual use */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
 }

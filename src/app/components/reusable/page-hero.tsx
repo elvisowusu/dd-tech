@@ -11,7 +11,6 @@ export default function PageHero({
   subtitle,
   backgroundImage = "/images/city-lights-bg.png",
   height = "h-[400px]",
-  overlayOpacity = 40,
 }: PageHeroProps) {
   return (
     <section
@@ -21,7 +20,7 @@ export default function PageHero({
       }}
     >
       {/* Dark overlay for better text readability */}
-      <div className={`absolute inset-0 bg-black/${overlayOpacity}`}></div>
+       <div className={`absolute inset-0 bg-gradient-to-br from-gray-900/80 to-black/60`} />
 
       {/* Content */}
       <div className="relative z-10 px-8 md:px-16 lg:px-24">
