@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-
 const services = [
   {
     id: 1,
@@ -69,7 +68,6 @@ export default function HeroCarousel() {
     <section className="relative w-full top-0 h-screen overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Background videos */}
       <div className="absolute inset-0 overflow-hidden">
-
         {/* <div
           className="flex h-full transition-transform duration-1000 ease-in-out"
           style={{
@@ -128,29 +126,29 @@ export default function HeroCarousel() {
           ))}
         </div> */}
         <div className="relative w-full h-full">
-    {services.map((service, index) => (
-      <div
-        key={service.id}
-        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-          index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
-        }`}
-      >
-        {/* Background Video */}
-        <video
-          src={service.video}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          preload="auto"
-        />
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
+              }`}
+            >
+              {/* Background Video */}
+              <video
+                src={service.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                preload="auto"
+              />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-white/10"></div>
-      </div>
-    ))}
-  </div>
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-white/10"></div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Foreground Content */}
@@ -158,7 +156,7 @@ export default function HeroCarousel() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-start justify-start">
             <div className="text-white space-y-6  max-w-5xl">
-              <h1 className="text-4xl md:text-7xl  font-bold leading-tight">
+              <h1 className="text-4xl md:text-7xl  font-bold leading-tight ">
                 {currentService.title}
               </h1>
               <p className="text-lg md:text-xl  opacity-90  leading-relaxed">
@@ -167,14 +165,14 @@ export default function HeroCarousel() {
               <div className="flex flex-col sm:flex-row gap-4 pt-6 ">
                 <Button
                   size="lg"
-                  className="bg-[#34c85a] text-white hover:bg-[#2ca74e] text-lg px-8 py-6"
+                  className="bg-[#34c85a] rounded-full text-white hover:bg-[#2ca74e] text-lg px-8 py-6"
                 >
                   Get Started
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-[#34c85a] text-white hover:bg-white hover:text-[#34c85a] hover:border-none text-lg px-8 py-6 bg-transparent"
+                  className="border-[#34c85a] rounded-full transition ease-in duration-500 text-white hover:bg-white hover:text-[#34c85a] hover:border-none text-lg px-8 py-6 bg-transparent"
                 >
                   Learn More
                 </Button>

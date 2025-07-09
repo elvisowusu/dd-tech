@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutUs = () => {
   return (
-    <section className=" p-4 sm:p-10 lg:p-16 ">
+    <section className=" p-4 sm:p-10 mt-20 lg:p-16 ">
       <div className=" flex flex-col lg:flex-row lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center">
@@ -22,13 +22,13 @@ export const AboutUs = () => {
         {/* Right Content - Text */}
         <div className="space-y-6 mt-6 lg:mt-3 my-4 lg:my-0 text-center lg:text-left">
           <div className="space-y-4">
-            <p className="text-lg sm:text-xl font-semibold text-[#89e8a1] uppercase tracking-wide">
+            <p className="info-header">
               About Us
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-snug">
+            <h2 className="info-title">
               At Digital Drivers Technology (DDTech)
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0">
+            <p className="info-description" >
               We believe that technology is the key to breaking barriers and creating
               an inclusive world. Based in Ghana, we are committed to promoting disability
               inclusion, accessibility, and digital empowerment in the tech space.

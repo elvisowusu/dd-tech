@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import PageHero from "../components/reusable/page-hero";
-
+import { motion } from "framer-motion";
 const teamMembers = [
   {
     name: "Michael Reynolds",
@@ -47,33 +47,33 @@ export const About = () => {
       <PageHero
         title="About Us"
         height="h-[450px]"
-        overlayOpacity={60}
+        overlayOpacity={80}
         backgroundImage="/images/continent.jpg"
       />
 
-      <section className=" md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto  gap-12 px-6 text-center space-y-12">
-        <div className="text-left ">
-
+      <section className=" my-10 md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto  gap-12 px-6 text-center space-y-12">
+        <div className="text-left space-y-4 ">
           {/* Main Heading */}
-          <h4 className="my-3 text-xl text-[#34c85a]">Who we are </h4>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-wide">
+          <h4 className="info-header">What we do</h4>
+          <h1 className="info-title">
             At Digital Drivers Technology (DDTech),
           </h1>
 
           {/* Description Paragraph */}
-          <div className="text-lg md:text-xl my-12 leading-relaxed max-w-4xl mx-auto">
-            <p className="text-gray-900">
-              We believe that technology is the key to breaking barriers and
-              creating an inclusive world. Based in Ghana, we are committed to
-              promoting disability inclusion, accessibility, and digital
-              empowerment in the tech space. Our innovative solutions ensure
-              that individuals, businesses, and organizations harness the power
-              of technology to enable independence and equal opportunities for
-              all.
-            </p>
-          </div>
+
+          <p className="info-description">
+            We believe that technology is the key to breaking barriers and
+            creating an inclusive world. Based in Ghana, we are committed to
+            promoting disability inclusion, accessibility, and digital
+            empowerment in the tech space. Our innovative solutions ensure that
+            individuals, businesses, and organizations harness the power of
+            technology to enable independence and equal opportunities for all.
+          </p>
         </div>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           <Image
             src="/images/employees.jpg"
             alt="employee image"
@@ -81,7 +81,7 @@ export const About = () => {
             height={600}
             className="rounded-sm"
           />
-        </div>
+        </motion.div>
       </section>
       <section className="py-20 px-6 ">
         <div className="max-w-6xl mx-auto">
@@ -170,7 +170,7 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen my-12 lg:my-24 flex items-center justify-end w-full overflow-hidden">
+      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-12 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
         {/* Overlay Card */}
         <div className="relative z-10 bg-white rounded-3xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
           {/* Toggle Buttons */}
