@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import { services } from "@/lib/data/servicesData";
 
 export default function Footer() {
   return (
@@ -92,12 +93,6 @@ export default function Footer() {
               >
                 Blog
               </Link>
-              <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
-                Services
-              </Link>
             </nav>
           </div>
 
@@ -105,30 +100,15 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-medium text-white">Solutions</h3>
             <nav className="space-y-3">
-              <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
-                Web Design and Mobile App Development
-              </Link>
-              <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
-                IT Training and services
-              </Link>
-              <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
-                Digital Consultancy Services
-              </Link>
-              <Link
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors text-sm"
-              >
-                Assistive Technology Solutions
-              </Link>
+              {services.map((service) => (
+                <Link
+                  key={service.id}
+                  href={`/services/${service.id}`}
+                  className="block text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {service.title}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -171,7 +151,6 @@ export default function Footer() {
         <p className="text-gray-400 text-sm mb-4 sm:mb-0">
           © 2025 Immersive360. All rights reserved
         </p>
-        
       </div>
     </footer>
   );
