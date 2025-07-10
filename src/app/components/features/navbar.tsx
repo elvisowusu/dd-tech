@@ -77,7 +77,7 @@ export default function Navbar() {
                         className="relative group"
                       >
                         <button
-                          className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-50  relative transition-colors duration-300 ${
+                          className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-200  relative transition-colors duration-300 ${
                             isScrolled ? "text-black" : "text-white"
                           }`}
                         >
@@ -101,7 +101,7 @@ export default function Navbar() {
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-5 py-3  text-base text-gray-700 hover:bg-gray-300 hover:text-[#34c85a] transition-colors duration-200"
+                              className="block px-5 py-3  text-base text-gray-700 hover:bg-gray-50 hover:text-[#34c85a] transition-colors duration-200"
                             >
                               {dropdownItem.name}
                             </a>
