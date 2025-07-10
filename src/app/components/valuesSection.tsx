@@ -46,7 +46,7 @@ export default function ValuesSection() {
   const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
 
   return (
-    <div className=" py-4 lg:py-8 flex flex-col-reverse md:flex-col">
+    <div className=" py-4 sm:py-10 my-10 lg:py-16 flex flex-col-reverse md:flex-col">
       {/* Core Values Section */}
       <div className="  px-4 sm:px-6">
         <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12" >

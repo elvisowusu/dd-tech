@@ -149,7 +149,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-gray-700">
         <p className="text-gray-400 text-sm mb-4 sm:mb-0">
-          © 2025 Immersive360. All rights reserved
+          © 2025 Digital Drivers Technology. All rights reserved
         </p>
       </div>
     </footer>

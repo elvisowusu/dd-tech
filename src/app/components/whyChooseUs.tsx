@@ -118,7 +118,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <div className="relative  py-20 px-6  lg:px-16 overflow-hidden">
+    <div className="relative  p-4 sm:p-6 my-10 overflow-hidden">
       <div className="relative ">
         {/* Header */}
         <div className="text-center mb-20">
