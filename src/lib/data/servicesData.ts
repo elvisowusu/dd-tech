@@ -33,13 +33,17 @@ export const services = [
         title: "Accessibility Solutions",
         description:
           "Ensuring your digital products are accessible to users with disabilities through WCAG compliance.",
-        features: ["WCAG Compliance", "Screen Reader Support", "Keyboard Navigation"],
+        features: [
+          "WCAG Compliance",
+          "Screen Reader Support",
+          "Keyboard Navigation",
+        ],
       },
     ],
   },
   {
     id: 2,
-    image: "/images/IT-training-image.jpg",
+    image: "/images/training-image.jpg",
     title: "IT Training Services",
     description:
       "We equip schools, professionals, and organizations with essential digital skills through customized training programs for individuals and corporate teams, digital literacy and assistive technology training for persons with disabilities.",
@@ -65,12 +69,21 @@ export const services = [
         title: "Digital Literacy",
         description:
           "Basic to advanced digital skills training for individuals and communities to improve digital inclusion.",
-        features: ["Basic Computer Skills", "Internet Safety", "Digital Communication"],
+        features: [
+          "Basic Computer Skills",
+          "Internet Safety",
+          "Digital Communication",
+        ],
       },
       {
         title: "Accessibility Training",
-        description: "Specialized training for persons with disabilities to effectively use assistive technologies.",
-        features: ["Screen Reader Training", "Voice Recognition", "Adaptive Hardware"],
+        description:
+          "Specialized training for persons with disabilities to effectively use assistive technologies.",
+        features: [
+          "Screen Reader Training",
+          "Voice Recognition",
+          "Adaptive Hardware",
+        ],
       },
     ],
   },
@@ -100,19 +113,29 @@ export const services = [
       },
       {
         title: "Accessibility Consulting",
-        description: "Expert guidance on making your digital products and services accessible to all users.",
-        features: ["WCAG Audits", "Compliance Strategy", "Implementation Support"],
+        description:
+          "Expert guidance on making your digital products and services accessible to all users.",
+        features: [
+          "WCAG Audits",
+          "Compliance Strategy",
+          "Implementation Support",
+        ],
       },
       {
         title: "Process Optimization",
-        description: "Streamline your operations through digital solutions and automated workflows.",
-        features: ["Workflow Analysis", "Automation Solutions", "Efficiency Improvements"],
+        description:
+          "Streamline your operations through digital solutions and automated workflows.",
+        features: [
+          "Workflow Analysis",
+          "Automation Solutions",
+          "Efficiency Improvements",
+        ],
       },
     ],
   },
   {
     id: 4,
-    image: "/images/assistive-technology-image.jpg",
+    image: "/images/assistive-technology.jpg",
     title: "Assistive Technology Solutions",
     description:
       "We develop, procure, and distribute cutting-edge assistive technologies and devices to enhance digital accessibility. ",
@@ -132,16 +155,22 @@ export const services = [
         title: "Custom Development",
         description:
           "Bespoke assistive technology solutions designed to meet specific accessibility needs and requirements.",
-        features: ["Custom Hardware", "Software Solutions", "User-Centered Design"],
+        features: [
+          "Custom Hardware",
+          "Software Solutions",
+          "User-Centered Design",
+        ],
       },
       {
         title: "Technology Procurement",
-        description: "Sourcing and procurement of the latest assistive technologies from leading global manufacturers.",
+        description:
+          "Sourcing and procurement of the latest assistive technologies from leading global manufacturers.",
         features: ["Global Sourcing", "Quality Assurance", "Cost Optimization"],
       },
       {
         title: "Support Services",
-        description: "Comprehensive support including training, maintenance, and ongoing technical assistance.",
+        description:
+          "Comprehensive support including training, maintenance, and ongoing technical assistance.",
         features: ["User Training", "Technical Support", "Device Maintenance"],
       },
     ],

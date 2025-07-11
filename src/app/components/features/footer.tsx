@@ -30,10 +30,10 @@ export default function Footer() {
 
             <div className="space-y-3 text-sm text-gray-300">
               <p className="text-lg text-white">Address:</p>
-              <p>Asofan new station, opposite A wise Hotel, Accra</p>
-              <p>Winneba, University of Education Campus</p>
-              <p>info@ddtech.com.gh</p>
-              <p>contact@ddtech.com.gh</p>
+              <p>Unnumbered House,</p>
+              <p>Refrigerator Street,</p>
+              <p> Effutu Municipality,</p>
+              <p> Winneba-C/R, Ghana.</p>
             </div>
 
             {/* Social Media Icons */}
@@ -96,6 +96,12 @@ export default function Footer() {
             </nav>
           </div>
 
+           <div className="space-y-3 text-sm text-gray-300">
+            <p className="text-lg text-white">Email:</p>
+            <p>info@ddtech.com.gh</p>
+            <p>contact@ddtech.com.gh</p>
+          </div>
+
           {/* Solutions Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-medium text-white">Solutions</h3>
@@ -143,6 +149,7 @@ export default function Footer() {
               </Link>
             </nav>
           </div>
+         
         </div>
 
         {/* Bottom Section */}
