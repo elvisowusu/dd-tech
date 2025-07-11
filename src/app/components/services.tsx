@@ -12,8 +12,8 @@ export default function Component() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="md:min-h-screen my-2 md:my-32 md:max-w-[100rem] mx-auto">
-      <div className="grid grid-col-1 items-start px-2 md:px-0 md:grid-cols-[40%_55%]  md:gap-16 ">
+    <div className="md:min-h-screen p-4 sm:p-10 my-10 lg:p-16 md:max-w-[100rem] mx-auto">
+      <div className="grid grid-col-1 items-start px-2 md:px-0 md:grid-cols-[45%_55%]  md:gap-16 ">
         {/* Left Content */}
         <div className="text-center md:text-start">
           <div className="space-y-2">

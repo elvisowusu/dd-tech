@@ -5,23 +5,25 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutUs = () => {
   return (
-    <section className=" p-4 sm:p-10 mt-20 lg:p-16 ">
-      <div className=" flex flex-col lg:flex-row lg:gap-20 items-start md:px-0 px-4">
+    <section className=" p-4 sm:p-10 my-20 lg:p-16 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
-        <div className="flex justify-center">
-          <div className="relative w-[90vw] sm:w-[90%] md:w-[600px] h-[300px] sm:h-[400px] md:h-[450px] lg:w-[800px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl">
+        <div className="flex justify-center ">
+          <div className="relative  rounded-xl overflow-hidden shadow-2xl">
             <Image
               src="/images/man-in-wheel.avif"
               alt="Digital accessibility and inclusion workspace"
-              fill
+             
               className="object-cover"
+              width={900}
+              height={700}
             />
           </div>
         </div>
 
         {/* Right Content - Text */}
         <div className="space-y-6 mt-6 lg:mt-3 my-4 lg:my-0 text-center lg:text-left">
-          <div className="space-y-4">
+          <div className="space-y-1">
             <p className="info-header">
               About Us
             </p>
@@ -37,10 +39,10 @@ export const AboutUs = () => {
             </p>
           </div>
 
-          <div className="pt-4">
+          <div>
             <Button
               variant="outline"
-              className="group px-8 py-3 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#89e8a1] hover:text-white transition-all duration-300"
+              className="group px-8 py-3 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
             >
               Learn more
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

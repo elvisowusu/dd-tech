@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { services } from "@/lib/data/servicesData";
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -17,12 +18,10 @@ export default function Navbar() {
       name: "Services",
       href: "#",
       hasDropdown: true,
-      dropdownItems: [
-        { name: "Web & Mobile Development", href: "#" },
-        { name: "IT Training Services", href: "#" },
-        { name: "Digital Consultancy Services", href: "#" },
-        { name: "Assistive Technology Solutions", href: "#" },
-      ],
+      dropdownItems: services.map((service) => ({
+        name: service.title,
+        href: `/services/${service.id}`,
+      })),
     },
     { name: "About", href: "/about" },
     { name: "Products", href: "#" },
@@ -65,77 +64,76 @@ export default function Navbar() {
             />
           </a>
 
-
-      <div className="flex items-center gap-12">
-
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-12">
-            {navItems.map((item) => (
-              <div key={item.name} className="relative group ">
-                {item.hasDropdown ? (
-                  <>
-                    <div
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                      className="relative group">
-                      <button
-                        className={`flex items-center gap-x-1 text-base font-normal hover:text-[#34c85a] relative transition-colors duration-300 ${
-                          isScrolled ? "text-black" : "text-white"
-                        }`}
-                      >
-                        {item.name}
-                        <ChevronDown
-                          className={`h-4 w-4 transition-transform duration-300 ${
-                            isServicesOpen ? "rotate-180" : ""
-                          }`}
-                        />
-                        <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-[#34c85a] origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                      </button>
+          <div className="flex items-center gap-12">
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center space-x-12">
+              {navItems.map((item) => (
+                <div key={item.name} className="relative group ">
+                  {item.hasDropdown ? (
+                    <>
                       <div
-                        className={`absolute left-0 mt-2 w-68 bg-white rounded-sm shadow-xl border border-gray-100 transition-all duration-300 z-50 ${
-                          isServicesOpen
-                            ? "opacity-100 translate-y-0 pointer-events-auto"
-                            : "opacity-0 -translate-y-2 pointer-events-none"
-                        }`}
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                        className="relative group"
                       >
-                        <div className="absolute -top-2 left-4 w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>
-                        {item.dropdownItems?.map((dropdownItem) => (
-                          <a
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="block px-5 py-3  text-base text-gray-700 hover:bg-gray-300 hover:text-[#34c85a] transition-colors duration-200"
-                          >
-                            {dropdownItem.name}
-                          </a>
-                        ))}
+                        <button
+                          className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-200  relative transition-colors duration-300 ${
+                            isScrolled ? "text-black" : "text-white"
+                          }`}
+                        >
+                          {item.name}
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform duration-300 ${
+                              isServicesOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                          <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-gray-300 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                        </button>
+                        <div
+                          className={`absolute left-0 mt-2 w-68 bg-white rounded-sm shadow-xl border border-gray-100 transition-all duration-300 z-50 ${
+                            isServicesOpen
+                              ? "opacity-100 translate-y-0 pointer-events-auto"
+                              : "opacity-0 -translate-y-2 pointer-events-none"
+                          }`}
+                        >
+                          <div className="absolute -top-2 left-4 w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <a
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              className="block px-5 py-3  text-base text-gray-700 hover:bg-gray-50 hover:text-[#34c85a] transition-colors duration-200"
+                            >
+                              {dropdownItem.name}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </>
-                ) : (
-                  <a
-                    href={item.href}
-                    className={`text-base font-normal hover:text-gray-50 relative group transition-colors duration-300 ${
-                      isScrolled ? "text-black" : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                    <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-gray-300 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
+                    </>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className={`text-base font-normal hover:text-gray-50 relative group transition-colors duration-300 ${
+                        isScrolled ? "text-black" : "text-white"
+                      }`}
+                    >
+                      {item.name}
+                      <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-gray-300 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button
-              className="rounded-full px-6 py-2 text-base font-normal transition-all duration-300 
+            {/* CTA Button */}
+            <div className="hidden lg:block">
+              <Button
+                className="rounded-full px-6 py-2 text-base font-normal transition-all duration-300 
                 bg-[#34c85a] text-white hover:bg-[#2ca74e]"
-            >
-              Partner with Us
-            </Button>
+              >
+                Partner with Us
+              </Button>
+            </div>
           </div>
-      </div>
 
           {/* Mobile Toggle */}
           <div className="lg:hidden">
