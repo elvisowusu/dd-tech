@@ -24,7 +24,7 @@ export default function Navbar() {
     },
     { name: "About", href: "/about" },
     { name: "Products", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Blog", href: "https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc" },
   ];
 
   useEffect(() => {
