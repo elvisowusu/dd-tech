@@ -10,7 +10,6 @@ export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [hideNav, setHideNav] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -25,14 +24,13 @@ export default function Navbar() {
     },
     { name: "About", href: "/about" },
     { name: "Products", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Blog", href: "https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsScrolled(scrollTop > 50);
-      setHideNav(scrollTop > 750);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,8 +40,6 @@ export default function Navbar() {
   return (
     <header
       className={`fixed w-full z-50  transition-all duration-500 ${
-        hideNav ? "-translate-y-full" : "translate-y-0"
-      } ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md top-0 shadow-lg   py-2"
           : "bg-transparent py-4"

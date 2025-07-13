@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export const AboutUs = () => {
   return (
@@ -39,7 +40,7 @@ export const AboutUs = () => {
             </p>
           </div>
 
-          <div>
+          <Link href="/about">
             <Button
               variant="outline"
               className="group px-8 py-3 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
@@ -47,7 +48,7 @@ export const AboutUs = () => {
               Learn more
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

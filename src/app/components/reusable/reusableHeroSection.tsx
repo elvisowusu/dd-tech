@@ -7,7 +7,7 @@ const services = [
   {
     id: 1,
     video: "/videos/company.mp4",
-    title: "Digital Drivers Technology (DDTech)",
+    title: "Digital Drivers Technologies (DD-Tech)",
     description:
       "Closing the Gap Through Technology,Empowering Inclusion, Transforming Lives",
     color: "from-gray-600/70 to-black/20",
@@ -68,63 +68,7 @@ export default function HeroCarousel() {
     <section className="relative w-full top-0 h-screen overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Background videos */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* <div
-          className="flex h-full transition-transform duration-1000 ease-in-out"
-          style={{
-            transform: `translateX(-${
-              currentSlide * (100 / services.length)
-            }%)`,
-            width: `${services.length * 100}%`,
-          }}
-        >
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className="relative h-screen flex-shrink-0"
-              style={{ width: `${100 / services.length}%` }}
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover"
-                priority={index === 0}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-white/10"></div>
-            </div>
-          ))}
-        </div> */}
-        {/* <div
-          className="flex h-full transition-transform duration-1000 ease-in-out"
-          style={{
-            transform: `translateX(-${
-              currentSlide * (100 / services.length)
-            }%)`,
-            width: `${services.length * 100}%`,
-          }}
-        >
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="relative h-screen flex-shrink-0"
-              style={{ width: `${100 / services.length}%` }}
-            >
-            
-              <video
-                src={service.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-                preload="auto"
-              />
-
-             
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-white/10"></div>
-            </div>
-          ))}
-        </div> */}
+        
         <div className="relative w-full h-full">
           {services.map((service, index) => (
             <div

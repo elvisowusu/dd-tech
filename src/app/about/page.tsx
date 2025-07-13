@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Michael Reynolds",
-    title: "CEO & Founder",
-    image: "/images/sampson-image.webp",
-    bio: "Visionary leader with 15+ years in renewable.",
+    name: "Sampson Dzivor",
+    title: "Co-Founder & CEO ",
+    image: "/images/sampson.jpg",
+    bio: "Visionary leader driving inclusive tech solutions",
     social: {
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/sampson-dzivor/",
       twitter: "#",
-      email: "michael@company.com",
+      email: "sdzivor76@gmail.com",
     },
   },
   {
@@ -30,10 +30,10 @@ const teamMembers = [
     },
   },
   {
-    name: "David Ojo",
-    title: "Lead Solar Engineer",
-    image: "/images/david-image.jpg",
-    bio: "Expert engineer crafting sustainable futures.",
+    name: "Frank Incoom",
+    title: "Graphics Designer",
+    image: "/images/Frank.jpg",
+    bio: "Expert Designer creating impactful visuals",
     social: {
       linkedin: "#",
       twitter: "#",
