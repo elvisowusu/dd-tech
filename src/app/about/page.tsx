@@ -19,12 +19,12 @@ const teamMembers = [
   {
     name: "Elvis Owusu Gyasi",
     title: "Chief Technology Officer",
-    image: "/images/elvis-image.webp",
-    bio: "Technology expert revolutionizing solar solutions",
+    image: "/images/Elvis.jpg",
+    bio: "Tech Innovator shaping accessible solutions",
     social: {
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/elvis-gyasi-owusu-0a4044193",
       twitter: "#",
-      email: "leroy@company.com",
+      email: "elvisgyasiowusu24@gmail.com",
     },
   },
   {
@@ -35,7 +35,7 @@ const teamMembers = [
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "david@company.com",
+      email: "#",
     },
   },
 ];
@@ -93,9 +93,11 @@ export const About = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
               Meet Our Leadership
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experienced professionals driving innovation in renewable energy
-              solutions
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              Our team is a diverse group of professionals dedicated to
+              driving innovation and accessibility in technology. With a shared
+              vision for a more inclusive future, we leverage our expertise to
+              create impactful solutions that empower individuals and businesses.
             </p>
           </div>
 
@@ -146,7 +148,7 @@ export const About = () => {
                       </a>
                       <a
                         href={`mailto:${member.social.email}`}
-                        className="w-9 h-9 bg-gray-100 hover:bg-gray-700 text-gray-600 hover:text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                        className="w-9 h-9 bg-gray-100 hover:bg-[#34c85a] text-gray-600 hover:text-white rounded-full flex items-center justify-center transition-colors duration-200"
                       >
                         <Mail className="w-4 h-4" />
                       </a>
@@ -172,7 +174,7 @@ export const About = () => {
       </section>
       <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-12 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
         {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-3xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
+        <div className="relative z-10 bg-white rounded-xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
           {/* Toggle Buttons */}
           <div className="flex mb-8">
             <button
