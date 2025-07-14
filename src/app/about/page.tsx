@@ -166,7 +166,7 @@ const About = () => {
 
       <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-12 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
         {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-3xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
+        <div className="relative z-10 bg-white rounded-xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
           {/* Toggle Buttons */}
           <div className="flex mb-8">
             <button
