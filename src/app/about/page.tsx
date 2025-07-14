@@ -6,6 +6,7 @@ import PageHero from "../components/reusable/page-hero";
 import { motion } from "framer-motion";
 import { ValuesOverlayCard } from "../components/valuesOverlayCard";
 import { Partners } from "../components/partners";
+import WhyChooseSection from "../components/whyChooseUs";
 const teamMembers = [
   {
     name: "Sampson Dzivor",
@@ -55,19 +56,14 @@ export const About = () => {
         <div className="text-center lg:text-left space-y-4 ">
           {/* Main Heading */}
           <h4 className="info-header">Who we are</h4>
-          <h1 className="info-title">
-            At Digital Drivers Technology (DDTech),
-          </h1>
+          <h1 className="info-title">Digital Drivers Technology (DDTech),</h1>
 
           {/* Description Paragraph */}
 
           <p className="info-description">
-            We believe that technology is the key to breaking barriers and
-            creating an inclusive world. Based in Ghana, we are committed to
-            promoting disability inclusion, accessibility, and digital
-            empowerment in the tech space. Our innovative solutions ensure that
-            individuals, businesses, and organizations harness the power of
-            technology to enable independence and equal opportunities for all.
+            is a social enterprise dedicated to developing accessible technology
+            solutions. We believe in the power of innovation to bridge digital
+            divides and empower communities.
           </p>
         </div>
         <motion.div
@@ -87,17 +83,15 @@ export const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16 space-y-4">
-            <p className="text-[#34c85a] font-medium text-lg md:text-4xl tracking-wider uppercase">
+            <p className="info-header">
               Our Team
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
+            <h2 className="info-title">
               Meet Our Leadership
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Our team is a diverse group of professionals dedicated to driving
-              innovation and accessibility in technology. With a shared vision
-              for a more inclusive future, we leverage our expertise to create
-              impactful solutions that empower individuals and businesses.
+              Our diverse team is committed to innovative, accessible technology
+              that empowers communities and businesses.
             </p>
           </div>
 
@@ -173,7 +167,8 @@ export const About = () => {
         </div>
       </section>
       <ValuesOverlayCard />
-      <Partners/>
+      <WhyChooseSection/>
+      <Partners />
     </>
   );
 };

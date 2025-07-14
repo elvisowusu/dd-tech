@@ -132,7 +132,7 @@
     @apply text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-snug;
   }
   .info-description{
-    @apply text-sm sm:text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0;
+    @apply text-sm sm:text-lg text-gray-600 leading-6 max-w-xl mx-auto lg:mx-0;
   }
   
   .section-title{
