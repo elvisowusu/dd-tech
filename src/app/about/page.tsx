@@ -5,6 +5,7 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 import PageHero from "../components/reusable/page-hero";
 import { motion } from "framer-motion";
 import { ValuesOverlayCard } from "../components/valuesOverlayCard";
+import { Partners } from "../components/partners";
 const teamMembers = [
   {
     name: "Sampson Dzivor",
@@ -51,9 +52,9 @@ export const About = () => {
       />
 
       <section className=" my-10 md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto  gap-12 px-6 text-center space-y-12">
-        <div className="text-left space-y-4 ">
+        <div className="text-center lg:text-left space-y-4 ">
           {/* Main Heading */}
-          <h4 className="info-header">What we do</h4>
+          <h4 className="info-header">Who we are</h4>
           <h1 className="info-title">
             At Digital Drivers Technology (DDTech),
           </h1>
@@ -172,6 +173,7 @@ export const About = () => {
         </div>
       </section>
       <ValuesOverlayCard />
+      <Partners/>
     </>
   );
 };
