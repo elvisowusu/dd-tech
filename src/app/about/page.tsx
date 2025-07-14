@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+
 import Image from "next/image";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import PageHero from "../components/reusable/page-hero";
 import { motion } from "framer-motion";
+import { ValuesOverlayCard } from "../components/valuesOverlayCard";
 const teamMembers = [
   {
     name: "Sampson Dzivor",
@@ -40,8 +41,6 @@ const teamMembers = [
   },
 ];
 export const About = () => {
-  const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
-
   return (
     <>
       <PageHero
@@ -94,10 +93,10 @@ export const About = () => {
               Meet Our Leadership
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Our team is a diverse group of professionals dedicated to
-              driving innovation and accessibility in technology. With a shared
-              vision for a more inclusive future, we leverage our expertise to
-              create impactful solutions that empower individuals and businesses.
+              Our team is a diverse group of professionals dedicated to driving
+              innovation and accessibility in technology. With a shared vision
+              for a more inclusive future, we leverage our expertise to create
+              impactful solutions that empower individuals and businesses.
             </p>
           </div>
 
@@ -172,52 +171,7 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-12 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
-        {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
-          {/* Toggle Buttons */}
-          <div className="flex mb-8">
-            <button
-              onClick={() => setActiveTab("vision")}
-              className={`px-6  py-1 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 ${
-                activeTab === "vision"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Vision
-            </button>
-            <button
-              onClick={() => setActiveTab("mission")}
-              className={`px-6 py-1  rounded-full text-sm md:text-lg font-semibold ml-4 transition-all duration-300 ${
-                activeTab === "mission"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Mission
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              {activeTab === "vision"
-                ? "Closing the Gap Through Technology"
-                : "Enabling Independence Through Innovation"}
-            </h2>
-
-            <p className="text-xl text-gray-600 leading-relaxed">
-              {activeTab === "vision"
-                ? "We envision a future where technology serves as a bridge, eliminating obstacles and ensuring accessibility for all individuals, including persons with disabilities."
-                : "Through cutting-edge digital solutions, we empower individuals and businesses to leverage technology for greater accessibility, inclusion, and productivity."}
-            </p>
-          </div>
-
-          {/* Red accent line */}
-          <div className="w-24 h-1 bg-[#34c85a] mt-8"></div>
-        </div>
-      </div>
+      <ValuesOverlayCard />
     </>
   );
 };
