@@ -31,11 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <body className={`${inter.variable} ${manrope.variable} antialiased`}>
+      <body className={`${inter.variable} ${manrope.variable} antialiased scroll-smooth`}>
         <AOSProvider />
         <BackgroundPattern />
         {/* Main Content */}
-        <div className="relative">
+        <div className="relative scroll-smooth">
           <Navbar />
           {children}
           <Footer />

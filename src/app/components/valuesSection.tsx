@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Users, Lightbulb, Shield, Heart, Handshake } from "lucide-react";
 
-
 const coreValues = [
   {
     id: 1,
@@ -46,10 +45,10 @@ export default function ValuesSection() {
   const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
 
   return (
-    <div className=" py-4 sm:py-10 my-10 lg:py-16 flex flex-col-reverse md:flex-col">
+    <div className=" py-4 sm:py-10 lg:py-16  mt-10  flex flex-col-reverse md:flex-col">
       {/* Core Values Section */}
-      <div className="  px-4 sm:px-6">
-        <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12" >
+      <div className=" mt-12 px-4 sm:px-6">
+        <div className="rounded-3xl sm:p-6 lg:p-12 space-y-12">
           <div className="mb-8 sm:mb-20 text-center">
             <h2 className="section-title">Our Core Values</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
@@ -63,7 +62,7 @@ export default function ValuesSection() {
             {coreValues.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={value.id} className="space-y-4 group" >
+                <div key={value.id} className="space-y-4 group">
                   <div className="flex items-start gap-4">
                     <div className="text-4xl sm:text-5xl font-bold text-[#89e8a1]  group-hover:text-[#34c85a] transition-colors min-w-fit">
                       {String(index + 1).padStart(2, "0")}
@@ -90,31 +89,40 @@ export default function ValuesSection() {
         </div>
       </div>
       {/* Vision and Mission Section */}
-      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen my-12 lg:my-24 flex items-center justify-end w-full overflow-hidden">
+
+      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-5 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
         {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
-          {/* Toggle Buttons */}
-          <div className="flex mb-8">
-            <button
-              onClick={() => setActiveTab("vision")}
-              className={`px-6  py-1 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 ${
-                activeTab === "vision"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Vision
-            </button>
-            <button
-              onClick={() => setActiveTab("mission")}
-              className={`px-6 py-1  rounded-full text-sm md:text-lg font-semibold ml-4 transition-all duration-300 ${
-                activeTab === "mission"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Mission
-            </button>
+        <div className="relative z-10 bg-white rounded-xl px-5 py-6 md:p-12 max-w-xl mx-8 shadow-2xl">
+          {/* Standardized Tab Nav */}
+          <div className=" mb-8">
+            <nav className="flex space-x-6">
+              <button
+                onClick={() => setActiveTab("vision")}
+                className={`pb-2 text-base md:text-lg font-medium transition-all duration-300 relative ${
+                  activeTab === "vision"
+                    ? "text-[#34c85a]"
+                    : "text-gray-500 hover:text-[#34c85a]"
+                }`}
+              >
+                Our Vision
+                {activeTab === "vision" && (
+                  <span className="absolute left-0 -bottom-[1px] w-full h-0.5 bg-[#34c85a] rounded-full transition-all duration-300"></span>
+                )}
+              </button>
+              <button
+                onClick={() => setActiveTab("mission")}
+                className={`pb-2 text-base md:text-lg font-medium transition-all duration-300 relative ${
+                  activeTab === "mission"
+                    ? "text-[#34c85a]"
+                    : "text-gray-500 hover:text-[#34c85a]"
+                }`}
+              >
+                Our Mission
+                {activeTab === "mission" && (
+                  <span className="absolute left-0 -bottom-[1px] w-full h-0.5 bg-[#34c85a] rounded-full transition-all duration-300"></span>
+                )}
+              </button>
+            </nav>
           </div>
 
           {/* Content */}
@@ -132,7 +140,7 @@ export default function ValuesSection() {
             </p>
           </div>
 
-          {/* Red accent line */}
+          {/* Green Accent Line */}
           <div className="w-24 h-1 bg-[#34c85a] mt-8"></div>
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function HeroCarousel() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % services.length);
-    }, 4000); // slower transition
+    }, 6000); // slower transition
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
@@ -107,18 +107,21 @@ export default function HeroCarousel() {
                 {currentService.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-6 ">
+               <a href="#contact-section" >
+
                 <Button
                   size="lg"
-                  className="bg-[#34c85a] rounded-full text-white hover:bg-[#2ca74e] text-lg px-8 py-6"
+                  className="bg-[#34c85a] w-full sm:w-auto rounded-full text-white hover:bg-[#2ca74e] text-lg px-8 py-6"
                 >
-                  Get Started
+                 Contact Us
                 </Button>
+               </a>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-[#34c85a] rounded-full transition ease-in duration-500 text-white hover:bg-white hover:text-[#34c85a] hover:border-none text-lg px-8 py-6 bg-transparent"
                 >
-                  Learn More
+                  Explore Services
                 </Button>
               </div>
             </div>

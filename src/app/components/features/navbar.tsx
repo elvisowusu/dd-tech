@@ -24,7 +24,10 @@ export default function Navbar() {
     },
     { name: "About", href: "/about" },
     { name: "Products", href: "#" },
-    { name: "Blog", href: "https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc" },
+    {
+      name: "Blog",
+      href: "https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc",
+    },
   ];
 
   useEffect(() => {
@@ -72,9 +75,12 @@ export default function Navbar() {
                         onMouseLeave={() => setIsServicesOpen(false)}
                         className="relative group"
                       >
+
                         <button
                           className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-200  relative transition-colors duration-300 ${
-                            isScrolled ? "text-black hover:text-gray-800" : "text-white"
+                            isScrolled
+                              ? "text-black hover:text-gray-800"
+                              : "text-white"
                           }`}
                         >
                           {item.name}
@@ -85,14 +91,18 @@ export default function Navbar() {
                           />
                           <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-gray-300 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                         </button>
+
+
+                        
                         <div
                           className={`absolute left-0 mt-2 w-68 bg-white rounded-sm shadow-xl border border-gray-100 transition-all duration-300 z-50 ${
                             isServicesOpen
-                              ? "opacity-100 translate-y-0 pointer-events-auto"
-                              : "opacity-0 -translate-y-2 pointer-events-none"
+                              ? "opacity-100 translate-y-0 visible"
+                              : "opacity-0 -translate-y-2 invisible"
                           }`}
                         >
-                          <div className="absolute -top-2 left-4 w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>
+                          <div className="absolute  -top-2 left-4 w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-white"></div>
+
                           {item.dropdownItems?.map((dropdownItem) => (
                             <a
                               key={dropdownItem.name}
@@ -109,7 +119,9 @@ export default function Navbar() {
                     <a
                       href={item.href}
                       className={`text-base font-normal hover:text-gray-50 relative group transition-colors duration-300 ${
-                        isScrolled ? "text-black hover:text-gray-800" : "text-white "
+                        isScrolled
+                          ? "text-black hover:text-gray-800"
+                          : "text-white "
                       }`}
                     >
                       {item.name}

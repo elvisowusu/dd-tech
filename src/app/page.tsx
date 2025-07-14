@@ -2,7 +2,7 @@
 import { useState,useEffect } from "react";
 import { AboutUs } from "./components/aboutUs";
 import HeroSection from "./components/heroSection";
-import PartnerSection from "./components/partnerWithUs";
+import PartnerSection from "./components/contactUs";
 import Services from "./components/services";
 import ValuesSection from "./components/valuesSection";
 import WhyChooseSection from "./components/whyChooseUs";
