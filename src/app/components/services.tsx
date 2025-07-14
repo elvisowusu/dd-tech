@@ -35,7 +35,7 @@ export default function Component() {
           <Button
             variant="outline"
             size="lg"
-            className="group px-8 py-6 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
+            className="group px-8 my-4 py-6 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
           >
             Explore Services
             <ArrowUpRight className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

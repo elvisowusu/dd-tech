@@ -132,7 +132,7 @@
     @apply text-xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-snug;
   }
   .info-description{
-    @apply text-sm sm:text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0;
+    @apply text-sm sm:text-lg text-gray-600 leading-6 max-w-xl mx-auto lg:mx-0;
   }
   
   .section-title{
@@ -170,4 +170,17 @@ button {
 
 .font-manrope {
   font-family: var(--font-manrope);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
 }

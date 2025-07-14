@@ -23,7 +23,6 @@ export default function Navbar() {
       })),
     },
     { name: "About", href: "/about" },
-    { name: "Products", href: "#" },
     {
       name: "Blog",
       href: "https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc",
@@ -75,7 +74,6 @@ export default function Navbar() {
                         onMouseLeave={() => setIsServicesOpen(false)}
                         className="relative group"
                       >
-
                         <button
                           className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-200  relative transition-colors duration-300 ${
                             isScrolled
@@ -92,8 +90,6 @@ export default function Navbar() {
                           <span className="absolute left-0 bottom-0 h-[2px] w-full scale-x-0 bg-gray-300 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                         </button>
 
-
-                        
                         <div
                           className={`absolute left-0 mt-2 w-68 bg-white rounded-sm shadow-xl border border-gray-100 transition-all duration-300 z-50 ${
                             isServicesOpen

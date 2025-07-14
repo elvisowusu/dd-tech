@@ -68,7 +68,6 @@ export default function HeroCarousel() {
     <section className="relative w-full top-0 h-screen overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Background videos */}
       <div className="absolute inset-0 overflow-hidden">
-        
         <div className="relative w-full h-full">
           {services.map((service, index) => (
             <div
@@ -107,15 +106,21 @@ export default function HeroCarousel() {
                 {currentService.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-6 ">
-               <a href="#contact-section" >
+                {/* <a href="#contact-section" > */}
 
                 <Button
                   size="lg"
+                  onClick={() => {
+                    const el = document.getElementById("contact-section");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className="bg-[#34c85a] w-full sm:w-auto rounded-full text-white hover:bg-[#2ca74e] text-lg px-8 py-6"
                 >
-                 Contact Us
+                  Contact Us
                 </Button>
-               </a>
+                {/* </a> */}
                 <Button
                   size="lg"
                   variant="outline"

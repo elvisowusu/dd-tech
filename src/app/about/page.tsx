@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import PageHero from "../components/reusable/page-hero";
 import { motion } from "framer-motion";
-
+import { ValuesOverlayCard } from "../components/valuesOverlayCard";
+import { Partners } from "../components/partners";
+import WhyChooseSection from "../components/whyChooseUs";
 const teamMembers = [
   {
     name: "Sampson Dzivor",
@@ -41,10 +42,7 @@ const teamMembers = [
     },
   },
 ];
-
-const About = () => {
-  const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
-
+export const About = () => {
   return (
     <>
       <PageHero
@@ -54,19 +52,18 @@ const About = () => {
         backgroundImage="/images/continent.jpg"
       />
 
-      <section className="my-10 md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto gap-12 px-6 text-center space-y-12">
-        <div className="text-left space-y-4">
-          <h4 className="info-header">What we do</h4>
-          <h1 className="info-title">
-            At Digital Drivers Technology (DDTech),
-          </h1>
+      <section className=" my-10 md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto  gap-12 px-6 text-center space-y-12">
+        <div className="text-center lg:text-left space-y-4 ">
+          {/* Main Heading */}
+          <h4 className="info-header">Who we are</h4>
+          <h1 className="info-title">Digital Drivers Technology (DDTech),</h1>
+
+          {/* Description Paragraph */}
+
           <p className="info-description">
-            We believe that technology is the key to breaking barriers and
-            creating an inclusive world. Based in Ghana, we are committed to
-            promoting disability inclusion, accessibility, and digital
-            empowerment in the tech space. Our innovative solutions ensure that
-            individuals, businesses, and organizations harness the power of
-            technology to enable independence and equal opportunities for all.
+            is a social enterprise dedicated to developing accessible technology
+            solutions. We believe in the power of innovation to bridge digital
+            divides and empower communities.
           </p>
         </div>
         <motion.div
@@ -86,17 +83,15 @@ const About = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <p className="text-[#34c85a] font-medium text-lg md:text-4xl tracking-wider uppercase">
+            <p className="info-header">
               Our Team
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
+            <h2 className="info-title">
               Meet Our Leadership
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Our team is a diverse group of professionals dedicated to
-              driving innovation and accessibility in technology. With a shared
-              vision for a more inclusive future, we leverage our expertise to
-              create impactful solutions that empower individuals and businesses.
+              Our diverse team is committed to innovative, accessible technology
+              that empowers communities and businesses.
             </p>
           </div>
 
@@ -163,51 +158,9 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-12 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
-        {/* Overlay Card */}
-        <div className="relative z-10 bg-white rounded-xl px-5  py-6 md:p-12 max-w-2xl mx-8 shadow-2xl">
-          {/* Toggle Buttons */}
-          <div className="flex mb-8">
-            <button
-              onClick={() => setActiveTab("vision")}
-              className={`px-6 py-1 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 ${
-                activeTab === "vision"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Vision
-            </button>
-            <button
-              onClick={() => setActiveTab("mission")}
-              className={`px-6 py-1 rounded-full text-sm md:text-lg font-semibold ml-4 transition-all duration-300 ${
-                activeTab === "mission"
-                  ? "bg-[#34c85a] text-white"
-                  : "bg-transparent text-[#34c85a] border border-[#34c85a] hover:border-gray-400"
-              }`}
-            >
-              Our Mission
-            </button>
-          </div>
-
-          <div className="space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              {activeTab === "vision"
-                ? "Closing the Gap Through Technology"
-                : "Enabling Independence Through Innovation"}
-            </h2>
-
-            <p className="text-xl text-gray-600 leading-relaxed">
-              {activeTab === "vision"
-                ? "We envision a future where technology serves as a bridge, eliminating obstacles and ensuring accessibility for all individuals, including persons with disabilities."
-                : "Through cutting-edge digital solutions, we empower individuals and businesses to leverage technology for greater accessibility, inclusion, and productivity."}
-            </p>
-          </div>
-
-          <div className="w-24 h-1 bg-[#34c85a] mt-8"></div>
-        </div>
-      </div>
+      <ValuesOverlayCard />
+      <WhyChooseSection/>
+      <Partners />
     </>
   );
 };
