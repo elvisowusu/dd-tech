@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const AboutUs = () => {
   return (
-    <section className=" p-4 sm:p-10 my-20 lg:p-16 ">
+    <section className=" p-4 sm:p-10 mt-10 lg:p-16 ">
       <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center ">
@@ -43,10 +43,10 @@ export const AboutUs = () => {
           <Link href="/about">
             <Button
               variant="outline"
-              className="group px-8 py-3 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
+              className="group px-10 py-6 text-base font-semibold rounded-full border-2 border-[#34c85a] text-[#34c85a] hover:bg-[#34c85a] hover:text-white transition-all duration-300"
             >
-              Learn more
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              Get to Know Us
+              <ArrowRight className=" h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>
