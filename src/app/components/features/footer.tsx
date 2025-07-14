@@ -88,7 +88,7 @@ export default function Footer() {
                 Contact Us
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/posts/crossboundary-advisory_bridgeinagriculture-empoweringyoungwomen-activity-7345775920735051776--hrW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBrx7gBaF96lfnjIxpaAw3oql-gIyY4YKc"
                 className="block text-gray-300 hover:text-white transition-colors text-sm"
               >
                 Blog
@@ -156,7 +156,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-gray-700">
         <p className="text-gray-400 text-sm mb-4 sm:mb-0">
-          © 2025 Digital Drivers Technology. All rights reserved
+          © 2025 Digital Drivers Technologies. All rights reserved
         </p>
       </div>
     </footer>

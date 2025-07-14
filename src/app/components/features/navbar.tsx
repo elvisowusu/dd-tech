@@ -74,7 +74,7 @@ export default function Navbar() {
                       >
                         <button
                           className={`flex items-center gap-x-1 text-base font-normal hover:text-gray-200  relative transition-colors duration-300 ${
-                            isScrolled ? "text-black" : "text-white"
+                            isScrolled ? "text-black hover:text-gray-800" : "text-white"
                           }`}
                         >
                           {item.name}
@@ -109,7 +109,7 @@ export default function Navbar() {
                     <a
                       href={item.href}
                       className={`text-base font-normal hover:text-gray-50 relative group transition-colors duration-300 ${
-                        isScrolled ? "text-black" : "text-white"
+                        isScrolled ? "text-black hover:text-gray-800" : "text-white "
                       }`}
                     >
                       {item.name}
