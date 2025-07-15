@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: "Sampson Dzivor",
     title: "Co-Founder & CEO ",
-    image: "/images/sampson.jpg",
+    image: "/images/about/sampson.jpg",
     bio: "Visionary leader driving inclusive tech solutions",
     social: {
       linkedin: "https://www.linkedin.com/in/sampson-dzivor/",
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Elvis Owusu Gyasi",
     title: "Chief Technology Officer",
-    image: "/images/Elvis.jpg",
+    image: "/images/about/Elvis.jpg",
     bio: "Tech Innovator shaping accessible solutions",
     social: {
       linkedin: "https://www.linkedin.com/in/elvis-gyasi-owusu-0a4044193",
@@ -33,12 +33,23 @@ const teamMembers = [
   {
     name: "Frank Incoom",
     title: "Graphics Designer",
-    image: "/images/Frank.jpg",
+    image: "/images/about/Frank.jpg",
     bio: "Expert Designer creating impactful visuals",
     social: {
       linkedin: "#",
       twitter: "#",
       email: "#",
+    },
+  },
+    {
+    name: "Adwoa Anim",
+    title: "Project Manager",
+    image: "/images/about/adwoa.jpg",
+    bio: "Project Manager ensuring seamless execution",
+    social: {
+      linkedin: "https://www.linkedin.com/in/nana-adjoa-anim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      twitter: "#",
+      email: "adjoaanim12@gmail.com",
     },
   },
 ];
@@ -79,9 +90,9 @@ export const About = () => {
           />
         </motion.div>
       </section>
-
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 ">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
           <div className="text-center mb-16 space-y-4">
             <p className="info-header">
               Our Team
@@ -95,7 +106,8 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="group">
                 <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
