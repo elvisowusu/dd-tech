@@ -124,6 +124,12 @@ export default function HeroCarousel() {
                 <Button
                   size="lg"
                   variant="outline"
+                   onClick={() => {
+                    const el = document.getElementById("services");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className="border-[#34c85a] rounded-full transition ease-in duration-500 text-white hover:bg-white hover:text-[#34c85a] hover:border-none text-lg px-8 py-6 bg-transparent"
                 >
                   Explore Services

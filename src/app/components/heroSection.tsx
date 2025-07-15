@@ -1,4 +1,4 @@
-import HeroCarousel from "./reusable/reusableHeroSection";
+import HeroCarousel from "./reusable/HeroSection";
 
 export default function HeroSection() {
   return (
