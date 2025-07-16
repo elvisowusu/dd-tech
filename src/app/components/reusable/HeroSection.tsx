@@ -7,7 +7,7 @@ const services = [
   {
     id: 1,
     video: "/videos/company.mp4",
-    title: "Digital Drivers Technologies (DD-Tech)",
+    title: "Digital Drivers Technologies (DD-T)",
     description:
       "Closing the Gap Through Technology,Empowering Inclusion, Transforming Lives",
     color: "from-gray-600/70 to-black/20",
