@@ -58,9 +58,9 @@ export const About = () => {
     <>
       <PageHero
         title="About Us"
-        height="h-[450px]"
-        overlayOpacity={80}
-        backgroundImage="/images/continent.jpg"
+        height="h-[440px]"
+        overlayOpacity="opacity-60"
+        backgroundImage="/images/about-dd-tech.jpg"
       />
 
       <section className=" my-10 md:my-32 grid grid-cols-1 lg:grid-cols-2 max-w-[100rem] mx-auto  gap-12 px-6 text-center space-y-12">

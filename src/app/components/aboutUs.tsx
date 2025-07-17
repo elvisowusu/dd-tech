@@ -29,7 +29,7 @@ export const AboutUs = () => {
               About Us
             </p>
             <h2 className="info-title">
-              At Digital Drivers Technology (DD-T)
+              At Digital Drivers Technologies (DD-Tech)
             </h2>
             <p className="info-description" >
               We believe that technology is the key to breaking barriers and creating

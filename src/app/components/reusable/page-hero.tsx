@@ -3,7 +3,7 @@ interface PageHeroProps {
   subtitle?: string
   backgroundImage?: string
   height?: string
-  overlayOpacity?: number
+  overlayOpacity?: string
 }
 
 export default function PageHero({
@@ -11,6 +11,7 @@ export default function PageHero({
   subtitle,
   backgroundImage = "/images/city-lights-bg.png",
   height = "h-[400px]",
+  overlayOpacity
 }: PageHeroProps) {
   return (
     <section
@@ -20,7 +21,7 @@ export default function PageHero({
       }}
     >
       {/* Dark overlay for better text readability */}
-       <div className={`absolute inset-0 bg-gradient-to-br from-gray-900/80 to-black/60`} />
+       <div className={`absolute ${overlayOpacity} inset-0 bg-gradient-to-br from-gray-900/80 to-black/60`} />
 
       {/* Content */}
       <div className="relative z-10 px-8 md:px-16 lg:px-24">
