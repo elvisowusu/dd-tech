@@ -1,4 +1,3 @@
-
 "use client";
 
 import { CheckCircle, Lightbulb, Users, TrendingUp } from "lucide-react";
@@ -51,7 +50,7 @@ export default function WhyChooseSection() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl mb-6 shadow-lg">
             <CheckCircle className="w-8 h-8 text-white" />
           </div>
-          <h2 className="section-title">Why Choose DDTech?</h2>
+          <h2 className="section-title">Why Choose DD-Tech?</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
           <p className="section-description">
             We are committed to creating technology solutions that bridge gaps
@@ -82,29 +81,31 @@ export default function WhyChooseSection() {
                   className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${reason.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
                 ></div>
 
-                <div className="relative space-y-6">
-                  {/* Icon */}
-                  <div
-                    className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r ${reason.gradient} rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="w-7 h-7 text-white" />
+                <div className="flex flex-col  justify-between h-full">
+                  <div>
+                    {/* Icon */}
+                    <div
+                      className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r ${reason.gradient} rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <IconComponent className="w-7 h-7 text-white" />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight group-hover:text-gray-800 transition-colors duration-300">
+                      {reason.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed text-base lg:text-lg font-light">
+                      {reason.description}
+                    </p>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight group-hover:text-gray-800 transition-colors duration-300">
-                    {reason.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-600 leading-relaxed text-base lg:text-lg font-light">
-                    {reason.description}
-                  </p>
 
                   {/* Brand highlight */}
                   <div className="flex items-center space-x-2 pt-4 border-t border-gray-100">
                     <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
                     <p className="text-gray-800 font-semibold text-sm tracking-wide uppercase">
-                      DDTech Solutions
+                      DD-Tech Solutions
                     </p>
                   </div>
                 </div>

@@ -67,7 +67,7 @@ export const About = () => {
         <div className="text-center lg:text-left space-y-4 ">
           {/* Main Heading */}
           <h4 className="info-header">Who we are</h4>
-          <h1 className="info-title">Digital Drivers Technology (DD-T),</h1>
+          <h1 className="info-title">Digital Drivers Technologies(DD-Tech),</h1>
 
           {/* Description Paragraph */}
 
