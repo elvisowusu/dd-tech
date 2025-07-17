@@ -12,7 +12,7 @@ export default function Page() {
         title="Blog"
         backgroundImage="/images/blog/blog-hero.jpg"
         height="h-[400px]"
-        overlayOpacity={80}
+        overlayOpacity=""
       />
       <section className="py-16 px-4 sm:px-8 lg:px-16 bg-gray-50" id="blog">
         <div className="max-w-7xl mx-auto">
