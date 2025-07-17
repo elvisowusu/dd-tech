@@ -8,7 +8,7 @@ import PageHero from "../components/reusable/page-hero";
 export default function Page() {
   return (
     <>
-      <PageHero
+      <PageHero 
         title="Blog"
         backgroundImage="/images/blog/blog-hero.jpg"
         height="h-[400px]"
