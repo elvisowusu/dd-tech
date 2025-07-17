@@ -1,64 +1,176 @@
-"use client";
-
-import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+// import { Card, CardContent } from "@/components/ui/card";
+import { Phone, Mail, Clock, MapPin, ArrowRight } from "lucide-react";
 
-export default function ContactBanner() {
+export default function ContactSection() {
   return (
-    <section
-      id="contact-section"
-      className="relative  bg-[url('/images/employees.jpg')]   bg-cover bg-center bg-no-repeat py-24 px-4 sm:px-6 lg:px-16 flex items-center justify-center text-white"
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 z-0 " />
+    <section className="py-16 px-4 " id="contact-section">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl text-center space-y-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-          Get in Touch with Us
-        </h2>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto">
-          Ready to embrace digital accessibility and create an inclusive future?
-          Lets close the gap together—through technology!
-        </p>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {/* Email Block */}
-          <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-left space-y-3">
-            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-              <Mail className="w-5 h-5 text-[#34c85a]" /> Our Emails
-            </h3>
-            <p className="text-white text-sm">info@ddtech.com.gh</p>
-            <p className="text-white text-sm">contact@ddtech.com.gh</p>
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="mb-12">
+              <p className="text-[#34c85a] font-medium mb-2">Contact us</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Get in Touch with Our Team
+              </h2>
+              <p className="text-gray-600 max-w-2xl">
+                We&#39;re here to answer your questions, discuss your project,
+                and help you find the best solutions for your software needs.
+                Reach out to us, and let&#39;s start building something great
+                together.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                Prefer a Direct Approach?
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-[#34c85a]" />
+                  <span className="text-gray-700">0202621904</span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-[#34c85a]" />
+                  <span className="text-gray-700">info@ddtech.com.gh</span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-[#34c85a]" />
+                  <span className="text-gray-700">
+                    Monday to Friday, 9 AM - 5 PM (GMT)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Map Placeholder */}
+            {/* <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-64 bg-gray-200 relative flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                    <p className="text-gray-500 text-sm">Interactive Map</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card> */}
+
+            {/* Office Location */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                Visit Our Office
+              </h4>
+
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-[#34c85a] mt-0.5" />
+                <span className="text-gray-700">
+                  Unnumbered House, Refrigerator Street, Effutu Municipality,
+                  Winneba-C/R, Ghana.
+                </span>
+              </div>
+
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 bg-transparent"
+              >
+                Get a Direction
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
-
-          {/* Call Block */}
-          <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl text-left space-y-3">
-            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-              <Phone className="w-5 h-5 text-[#34c85a]" /> Call Us
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Let&#39;s Talk About Your Project
             </h3>
-            <p className="text-white text-sm">0202621904</p>
-          </div>
-        </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@ddtech.com.gh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto"
-          >
-            <Button className="bg-[#34c85a] hover:bg-[#2ca74e] text-white py-6 text-lg font-semibold rounded-xl w-full sm:w-auto">
-              Email Us Today
-            </Button>
-          </a>
-          <Button
-            variant="outline"
-            className="border-2 border-white text-black hover:bg-white hover:text-black py-6 text-lg font-semibold rounded-xl w-full sm:w-auto"
-          >
-            Schedule a Consultation
-          </Button>
+            <form className="space-y-6">
+              <div>
+                <Label
+                  htmlFor="name"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Name
+                </Label>
+                <Input
+                  id="name"
+                  placeholder="Your full name"
+                  className="mt-1"
+                />
+              </div>
+
+              <div>
+                <Label
+                  htmlFor="email"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Email Address
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="We'll get back to you here"
+                  className="mt-1"
+                />
+              </div>
+
+              <div>
+                <Label
+                  htmlFor="company"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Company Name
+                </Label>
+                <Input
+                  id="company"
+                  placeholder="Let us know who you represent"
+                  className="mt-1"
+                />
+              </div>
+
+              <div>
+                <Label
+                  htmlFor="subject"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Subject
+                </Label>
+                <Input
+                  id="subject"
+                  placeholder="What's this about?"
+                  className="mt-1"
+                />
+              </div>
+
+              <div>
+                <Label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  Message
+                </Label>
+                <Textarea
+                  id="message"
+                  placeholder="Tell us how we can help"
+                  rows={4}
+                  className="mt-1"
+                />
+              </div>
+
+              <Button className="w-full bg-[#34c85a] hover:bg-[#2ca74e] text-white py-3">
+                Send Message
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

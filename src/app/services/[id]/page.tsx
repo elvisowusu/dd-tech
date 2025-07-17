@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import PageHero from "@/app/components/reusable/page-hero"
 import { services } from "@/lib/data/servicesData"
+import ContactModal from "@/app/components/contactModal"
 
 
 
@@ -123,10 +124,7 @@ export default function ServiceDetailPage() {
               organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-[#34c85a] hover:bg-[#2ca74e] text-white px-8 py-3 rounded-full">
-                Get Started Today
-                <ArrowUpRight className="ml-2 h-4 w-4" />
-              </Button>
+              <ContactModal/>
               <Button
                 variant="outline"
                 size="lg"
