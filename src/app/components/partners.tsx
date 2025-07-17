@@ -35,7 +35,7 @@ export const Partners = () => {
           <div className="animate-marquee flex gap-16">
             {[...logos, ...logos].map((logo, index) => (
               <div key={index} className="flex-shrink-0">
-                <a href={logo.link}>
+                <a href={logo.link} target="_blank">
                   <Image
                     src={logo.src}
                     alt={logo.name}
