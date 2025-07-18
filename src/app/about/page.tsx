@@ -53,7 +53,7 @@ const teamMembers = [
     },
   },
 ];
-export const About = () => {
+const About = () => {
   return (
     <>
       <PageHero
