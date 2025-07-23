@@ -20,6 +20,18 @@ const teamMembers = [
     },
   },
   {
+    name: "Adwoa Anim",
+    title: "Project Manager",
+    image: "/images/about/adwoa.jpg",
+    bio: "Project Manager ensuring seamless execution",
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/nana-adjoa-anim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      twitter: "#",
+      email: "adjoaanim12@gmail.com",
+    },
+  },
+  {
     name: "Elvis Owusu Gyasi",
     title: "Chief Technology Officer",
     image: "/images/about/Elvis.jpg",
@@ -31,7 +43,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Frank Incoom",
+    name: "Frank Inkoom",
     title: "Graphics Designer",
     image: "/images/about/Frank.jpg",
     bio: "Expert Designer creating impactful visuals",
@@ -39,17 +51,6 @@ const teamMembers = [
       linkedin: "#",
       twitter: "#",
       email: "#",
-    },
-  },
-    {
-    name: "Adwoa Anim",
-    title: "Project Manager",
-    image: "/images/about/adwoa.jpg",
-    bio: "Project Manager ensuring seamless execution",
-    social: {
-      linkedin: "https://www.linkedin.com/in/nana-adjoa-anim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      twitter: "#",
-      email: "adjoaanim12@gmail.com",
     },
   },
 ];
@@ -94,12 +95,8 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16 space-y-4">
-            <p className="info-header">
-              Our Team
-            </p>
-            <h2 className="info-title">
-              Meet Our Leadership
-            </h2>
+            <p className="info-header">Our Team</p>
+            <h2 className="info-title">Meet Our Leadership</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Our diverse team is committed to innovative, accessible technology
               that empowers communities and businesses.
@@ -171,7 +168,7 @@ const About = () => {
         </div>
       </section>
       <ValuesOverlayCard />
-      <WhyChooseSection/>
+      <WhyChooseSection />
       <Partners />
     </>
   );

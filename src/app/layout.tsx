@@ -19,9 +19,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Drivers Technology _ DD-T",
+  title: "Digital Drivers Technologies _ DD-Tech",
   description:
-    "At Digital Drivers Technology (DD-T), we believe that technology is the key to breaking barriers and creating an inclusive world. Based in Ghana, we are committed to promoting disability inclusion, accessibility, and digital empowerment in the tech space. Our innovative solutions ensure that individuals, businesses, and organizations harness the power of technology to enable independence and equal opportunities for all.",
+    "At Digital Drivers Technologies (DD-Tech), we believe that technology is the key to breaking barriers and creating an inclusive world. Based in Ghana, we are committed to promoting disability inclusion, accessibility, and digital empowerment in the tech space. Our innovative solutions ensure that individuals, businesses, and organizations harness the power of technology to enable independence and equal opportunities for all.",
 };
 
 export default function RootLayout({
