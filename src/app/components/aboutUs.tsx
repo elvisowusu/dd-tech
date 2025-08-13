@@ -10,14 +10,12 @@ export const AboutUs = () => {
       <div className=" grid grid-cols-1 lg:grid-cols-2 lg:gap-20 items-start md:px-0 px-4">
         {/* Left Content - Image */}
         <div className="flex justify-center ">
-          <div className="relative  rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative  rounded-xl overflow-hidden shadow-2xl w-[900px] h-[600px]">
             <Image
-              src="/images/man-in-wheel.avif"
+              src="/images/about/about.jpg"
               alt="Digital accessibility and inclusion workspace"
-             
-              className="object-cover"
-              width={900}
-              height={700}
+              className=" object-cover"
+              fill
             />
           </div>
         </div>
@@ -25,18 +23,18 @@ export const AboutUs = () => {
         {/* Right Content - Text */}
         <div className="space-y-6 mt-6 lg:mt-3 my-4 lg:my-0 text-center lg:text-left">
           <div className="space-y-1">
-            <p className="info-header">
-              About Us
-            </p>
+            <p className="info-header">About Us</p>
             <h2 className="info-title">
               At Digital Drivers Technologies (DD-Tech)
             </h2>
-            <p className="info-description" >
-              We believe that technology is the key to breaking barriers and creating
-              an inclusive world. Based in Ghana, we are committed to promoting disability
-              inclusion, accessibility, and digital empowerment in the tech space.
-              Our innovative solutions ensure that individuals, businesses, and organizations
-              harness the power of technology to enable independence and equal opportunities for all.
+            <p className="info-description">
+              We believe that technology is the key to breaking barriers and
+              creating an inclusive world. Based in Ghana, we are committed to
+              promoting disability inclusion, accessibility, and digital
+              empowerment in the tech space. Our innovative solutions ensure
+              that individuals, businesses, and organizations harness the power
+              of technology to enable independence and equal opportunities for
+              all.
             </p>
           </div>
 
@@ -52,6 +50,5 @@ export const AboutUs = () => {
         </div>
       </div>
     </section>
-    
   );
 };

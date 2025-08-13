@@ -33,4 +33,13 @@ export const blogPosts = [
     image: "/images/blog/windyBay-facebook.png",
     link: "https://web.facebook.com/radiowindybay98.3fm/videos/windy-morning-express-with-bright-fugar-16072025/606384185861007/?rdid=pAg4sd42ftwVkMsU",
   },
+  {
+    title:
+      "Championing accessibility and inclusion",
+    description:
+      "Championing accessibility and inclusion, Sampson Dzivor is transforming the digital landscape for persons with disabilities and marginalised communities. 💻 Living with cerebral palsy, Sampson knows first-hand the challenges of inaccessible education, limited opportunities, and systemic bias. His solution?",
+    image: "/images/blog/sampson-image.jpeg",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7360694137358008321/ ",
+  },
+
 ];

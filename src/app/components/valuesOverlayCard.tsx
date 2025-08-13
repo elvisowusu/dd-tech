@@ -5,7 +5,7 @@ export const ValuesOverlayCard = () => {
   const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
 
   return (
-    <div className="bg-[url('/images/consultancy-image.jpg')] bg-fixed bg-cover relative h-screen mt-5 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
+    <div className="bg-[url('/images/group-image.jpg')] bg-fixed bg-center bg-cover bg-no-repeat relative h-screen mt-5 lg:mt-24 flex items-center justify-end w-full overflow-hidden">
       {/* Overlay Card */}
       <div className="relative z-10 bg-white rounded-xl px-5 py-6 md:p-12 max-w-xl mx-8 shadow-2xl">
         {/* Standardized Tab Nav */}
