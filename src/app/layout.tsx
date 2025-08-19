@@ -5,6 +5,7 @@ import Navbar from "./components/features/navbar";
 import Footer from "./components/features/footer";
 import AOSProvider from "./components/aosProvider";
 import { BackgroundPattern } from "./components/backgroundPattern";
+import BoafoWidgetInitializer from "@/components/BoafoWidgetInitializer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,8 @@ export default function RootLayout({
       <body className={`${inter.variable} ${manrope.variable} antialiased scroll-smooth`}>
         <AOSProvider />
         <BackgroundPattern />
+        {/* Initialize widget */}
+        <BoafoWidgetInitializer />
         {/* Main Content */}
         <div className="relative scroll-smooth">
           <Navbar />
