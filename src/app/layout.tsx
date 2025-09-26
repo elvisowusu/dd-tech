@@ -36,13 +36,13 @@ export default function RootLayout({
         <AOSProvider />
         <BackgroundPattern />
         {/* Initialize widget */}
-        <BoafoWidgetInitializer />
         {/* Main Content */}
         <div className="relative scroll-smooth">
           <Navbar />
           {children}
           <Footer />
         </div>
+        <BoafoWidgetInitializer />
       </body>
     </html>
   );
